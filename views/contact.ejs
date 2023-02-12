@@ -1,0 +1,67 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+  <!--Main Nav Navigation-->
+  
+<main class="container">
+  <div class="jumbotron">
+    <!-- <h1 class="display-4">Welcome to the <%= title %> Page</h1>  -->
+    <div class="container">
+      <div class="row header">
+        <h1>CONTACT Me &nbsp;</h1>
+        <h3>Fill out the form below to learn more!</h3>
+      </div>
+      <div class="row body">
+        <form action="#">
+          <ul>
+            
+            <!-- <li> -->
+              <p class="left">
+                <label for="first_name">First name:<span class="req">*</label>
+                <input type="text" name="first_name" placeholder="John" />
+              </p>
+              <p class="pull-right">
+                <label for="last_name">Last name:<span class="req">*</label>
+                <input type="text" name="last_name" placeholder="Smith" />      
+              </p>
+            <!-- </li> -->
+            
+            <!-- <li> -->
+              <p>
+                <label for="email">Email: <span class="req">*</span></label>
+                <input type="email" name="email" placeholder="john.smith@gmail.com" />
+              </p>
+            <!-- </li>         -->
+            <!-- <li> -->
+              <div class="divider">
+
+              <!-- </li> -->
+            <!-- <li> -->
+              <label for="message">Message</label>
+              <textarea cols="46" rows="3" name="message"></textarea>
+            </div>
+            <!-- </li> -->
+            <br>
+              <!-- <li> -->
+              <!-- <input class="btn btn-submit" type="submit" value="Submit" /> -->
+              <button type="button" onclick="alert('Message saved')">Submit</button>
+              <small>or press <strong>enter</strong></small>
+            <!-- </li> -->
+                 
+
+          </ul>
+        </form>  
+      </div>
+    </div>
+    </div>
+  </main>
+  
+   <!--<h1><%= title %></h1>-->
+   <!--<p>Welcome to <%= title %></p>-->
+   <!--Script section-->
+   
+   <%-include partials/bottom_nav.ejs%>
+   <%-include partials/footer.ejs%>
+
+
+
+

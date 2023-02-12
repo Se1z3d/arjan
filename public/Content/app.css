@@ -1,0 +1,60 @@
+/*Custom css goes here*/
+
+.logo-image {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+.photo-image {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
+
+.navstyle {
+
+    height: 35px;
+    padding: 0%;
+    background-color: rgb(165 194 218 / 40%);
+}
+
+.footer-text {
+    font-size: large;
+}
+
+body {
+    background-image: url(../Assets/images/background.png);
+    color: white;
+    background-size: cover;
+}
+
+a {
+    color: antiquewhite;
+}
+
+
+.navbar {
+    background-color: #ffffff;
+
+}
+/* 
+.contact-body {
+    background-color: lighten(#808080, 10%);
+    font-size: 100%;
+    lato-reg
+}
+  div, textarea, input {
+    box-sizing(border-box); 
+  }  
+  .container {  
+    max-width: 510px;
+    min-width: 324px;
+    margin: 50px auto 0px;
+    background-color: #ffffff;
+    border: 1px solid lighten(#808080, 1%); 
+    border-bottom: 3px solid #808080;
+  } */
