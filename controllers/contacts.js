@@ -30,7 +30,7 @@ module.exports.processAddPage = (req, res, next) => {
         "Customer_Number": req.body.number,
         "Email_ID": req.body.email
     });
-    Contacts.create(newContact, (err, Book) => {
+    Contacts.create(newContact, (err, Contact) => {
         if (err) {
             console.log(err);
             res.end(err);
