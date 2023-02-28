@@ -55,17 +55,18 @@
                     <%}else{%>
                   <li class="nav-item">
                     <%}%>
-                      <a class="nav-link active" aria-current="page" href="/contactList">
+                      <a class="nav-link active" aria-current="page" href="/">
                         <i class="fa-solid fa-id-card-clip"></i> Business Contact List</a>
                   </li>
-                <% if(title=="Home" ){%>
-                  <li class="nav-item active">
-                    <%}else{%>
-                  <li class="nav-item">
-                    <%}%>
-                      <a class="nav-link active" aria-current="page" href="/login">
-                          <i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                  </li>
+                  <%if(typeof displayName=='string' &&displayName){%>
+                    <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome,<%=displayName%>
+                    </li>
+                    <li class="nav-item"><a href="/logout" class="nav-link"><i
+                          class="fas fa-lg fa-sign-out-alt"></i>logout</a></li>
+                    <%} else {%>
+                      <li class="nav-item"><a href="/login" class="nav-link"><i
+                            class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
+                      <%}%>
                 
 
 
