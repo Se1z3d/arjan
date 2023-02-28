@@ -1,4 +1,4 @@
 module.exports =
 {
-    "URI":"mongodb://localhost/book_store"
+    "URI":"mongodb+srv://adityaamatya:aditya12345@portfolio.onzkelz.mongodb.net/?retryWrites=true&w=majority"
 }
