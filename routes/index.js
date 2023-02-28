@@ -4,7 +4,7 @@ let indexController = require('../controllers/index');
 let passport = require('passport');
 
 /* GET home page. */
-router.get('/', indexController.displayHomePage);
+// router.get('/', indexController.displayHomePage);
 
 router.get('/home', indexController.displayHomePage);
 
