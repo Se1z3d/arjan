@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 //create a reference to the db Schema which is the model
 let Contacts = require('../models/contacts');
 
-//we want to display the bookList
+//we want to display the contactList
 module.exports.displayList = (req, res, next) => {
     Contacts.find((err, contactList) => {
         if (err) {
@@ -14,9 +14,9 @@ module.exports.displayList = (req, res, next) => {
             return res.redirect('/login');
         }
         else {
-            console.log(contactList);
+            // console.log(contactList);
             const sortedContactList = contactList.sort((a, b) => a.Customer_Name.localeCompare(b.Customer_Name))
-            res.render('contact/list', { title: 'Business Contacts', ContactList: sortedContactList, displayName: req.user ? req.user.displayName : '' });
+            res.render('contact/list', { title: 'Business Contacts', contactList: sortedContactList, displayName: req.user ? req.user.displayName : '' });
         }
     });
 }
@@ -26,6 +26,7 @@ module.exports.displayAddPage = (req, res, next) => {
 
 module.exports.processAddPage = (req, res, next) => {
     let newContact = Contacts({
+        "CustomerID" : req.body.id,
         "Customer_Name": req.body.name,
         "Customer_Number": req.body.number,
         "Email_ID": req.body.email
@@ -63,7 +64,7 @@ module.exports.processEditPage = (req, res, next) => {
         "Email_ID": req.body.Email_ID
     });
 
-    console.log('updatedContact', req.body.name)
+    console.log('req.body.Number', req.body)
 
     Contacts.updateOne({ _id: id }, updatedContact, (err) => {
         if (err) {
