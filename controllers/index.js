@@ -8,7 +8,7 @@ let UserModel = require('../models/user');
 let User = UserModel.User;
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'index', displayName: req.user ? req.user.displayName : '' });
+    res.render('index', { title: 'index', });
 }
 module.exports.displayAboutPage = (req, res, next) => {
     res.render('about', { title: 'About', displayName: req.user ? req.user.displayName : '' });
