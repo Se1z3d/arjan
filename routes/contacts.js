@@ -6,7 +6,7 @@ let passport = require('passport');
 function requireAuth(req, res, next) {
     //check if the user is logged in
     if (!req.isAuthenticated()) {
-        return res.redirect('/contactList')
+        return res.redirect('/login')
     }
     next();
 }
